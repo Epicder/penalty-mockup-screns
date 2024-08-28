@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+/* Color Palette */
+:root {
+    --primary-color: #213a57;
+    --secondary-color: #14919b;
+    --accent-color: #45dfb1;
+    --button-color: #80ED99;
+    --body-color: #0b6477;
+    --section-color: rgba(69, 223, 177, 0.3);
+    --border-radius: 15px;
+    --opacity-article: 0.7;
+    --box-shadow-color: rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s;
+  }
+  
+  /* Global Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, var(--primary-color) 0%, var(--secondary-color) 100%);
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+  }
+  
+  /* Typography */
+  @font-face {
+    font-family: 'title';
+    src: url('./fonts/race_sport.ttf');
+  }
+  
+  h1 {
+    position: absolute;
+    top: 8%;
+    font-family: 'title', sans-serif;
+    font-size: 72px;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 10px var(--box-shadow-color);
+  }
+  
+  /* Section Styles */
+  section#window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 750px;
+    height: 500px;
+    background-color: var(--section-color);
+    backdrop-filter: blur(10px);
+    position: relative;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px var(--box-shadow-color);
+    padding: 20px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  
+  section#window:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Button Styles */
+  button {
+    margin-top: 20px;
+    width: 240px;
+    height: 60px;
+    background-color: var(--button-color);
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  button:hover {
+    background-color: #4FE9A7;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  button:active {
+    transform: translateY(2px);
+  }
+  
+  /* Arrow Styles */
+  #arrow-left, #arrow-right {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+  }
+  
+  #arrow-left {
+    left: 400px;
+  }
+  
+  #arrow-right {
+    right: 400px;
+  }
+  
+  #arrow-left:hover, #arrow-right:hover {
+    background-color: #4FE9A7;
+  }
+  
+  #arrow-left:active, #arrow-right:active {
+    transform: scale(1.1);
+  }
+  
+  /* Settings and Info Buttons */
+  #settings-button, #info-button {
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    font-size: 30px;
+  }
+  
+  #settings-button {
+    left: 10px;
+  }
+  
+  #info-button {
+    left: 70px;
+  }
+  
+  #settings-button:hover, #info-button:hover {
+    background-color: #4FE9A7;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  
+  #settings-button:active, #info-button:active {
+    transform: translateY(2px);
+  }
+  
+  /* Label and Select Styles */
+  section#window label, section#window select {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  section#window {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  select {
+    padding: 8px;
+    border-radius: var(--border-radius);
+    border: none;
+    background-color: #14919b;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+    transition: background-color var(--transition-speed);
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  select:hover {
+    background-color: #45dfb1;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #info-header {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+  }
