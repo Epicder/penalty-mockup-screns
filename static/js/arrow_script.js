@@ -55,14 +55,12 @@ const arrowLeft = document.getElementById("arrow-left");
 const arrowRight = document.getElementById("arrow-right");
 section.innerHTML = articles[0];
 const play_btn = document.getElementById("play")
-const gif_container = document.getElementById("gif-container")
 
 function play_animation() {
   document.body.classList.add("closing-animation");
-
-  //document.body.addEventListener("animationend", function() {
-    //gif_container.style.display = "block";
-  //});
+  setTimeout(() => {
+    window.location.href = "/play-classic";
+    }, 3200);
 }
 
 function attachInfoListener() {
@@ -79,7 +77,7 @@ function changeArticle(direction) {
     currentIndex = (currentIndex + direction + articles.length) % articles.length;
     section.innerHTML = articles[currentIndex];
     section.style.opacity = 1;
-    attachInfoListener();  // Reattach the info button listener
+    attachInfoListener();
   }, 600);
 }
 

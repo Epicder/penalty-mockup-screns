@@ -10,6 +10,12 @@ def menu():
     except Exception as e:
         return str(e)
 
+@app.route('/play-classic', methods=['GET'])
+def play_classic():
+    try:
+        return render_template('play_classic.html')
+    except Exception as e:
+        return str(e)
 
 if __name__ == "__main__":
     app.run()

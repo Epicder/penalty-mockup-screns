@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
-/* Color Palette */
+
 :root {
     --primary-color: #213a57;
     --secondary-color: #14919b;
@@ -13,7 +13,7 @@
     --transition-speed: 0.3s;
   }
   
-  /* Global Styles */
+
   * {
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@
     text-shadow: 2px 2px 10px var(--box-shadow-color);
   }
   
-  /* Section Styles */
+ 
   section#window {
     display: flex;
     flex-direction: column;
@@ -67,7 +67,7 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   }
   
-  /* Button Styles */
+
   button {
     margin-top: 20px;
     width: 240px;
@@ -92,7 +92,7 @@
     transform: translateY(2px);
   }
   
-  /* Arrow Styles */
+ 
   #arrow-left, #arrow-right {
     position: absolute;
     width: 50px;
@@ -122,7 +122,7 @@
     transform: scale(1.1);
   }
   
-  /* Settings and Info Buttons */
+
   #settings-button, #info-button, #info-back-button {
     position: absolute;
     top: 10px;
@@ -160,7 +160,6 @@
     width: 40px;
     height: 40px;
     opacity: 0.8;
-    backdrop-filter: blur(10px);
   }
   
   #settings-button {
@@ -180,7 +179,7 @@
     transform: translateY(2px);
   }
   
-  /* Label and Select Styles */
+
   section#window label, section#window select {
     margin-top: 10px;
     font-size: 16px;
@@ -286,6 +285,7 @@
 
   .closing-animation {
     animation: close-screen 2s forwards;
+    
   }
   
   @keyframes close-screen {
@@ -297,10 +297,13 @@
     }
   }
 
+
   #result-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    z-index: 1001;
+    display: block;
+  }
+  
+  #result-container img, #result-container p {
+    z-index: 1001;
+    display: block;
   }
