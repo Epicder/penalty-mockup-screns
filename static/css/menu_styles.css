@@ -123,7 +123,7 @@
   }
   
   /* Settings and Info Buttons */
-  #settings-button, #info-button {
+  #settings-button, #info-button, #info-back-button {
     position: absolute;
     top: 10px;
     width: 50px;
@@ -192,4 +192,25 @@
     position: absolute;
     top: 30%;
     text-align: center;
+  }
+
+  #shop-heading {
+    position: absolute;
+    top: 10%;
+    left: 44%;
+    text-align: center;
+  }
+
+  #cartas, #positions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .shop-image {
+    width: 200px;  /* Ajusta el tamaño de la imagen */
+    height: 100px; /* Rectangular */
+    object-fit: cover;  /* Para que la imagen se ajuste bien */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
   }
