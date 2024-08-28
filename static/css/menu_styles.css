@@ -138,6 +138,30 @@
     transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
     font-size: 30px;
   }
+
+  #friend-button {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    margin-top: 25px;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px var(--box-shadow-color);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    font-size: 30px;
+    overflow: hidden;
+  }
+  
+  .user-img {
+    position: relative;
+    right: -4px;
+    bottom: -2px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    backdrop-filter: blur(10px);
+  }
   
   #settings-button {
     left: 10px;
@@ -196,21 +220,87 @@
 
   #shop-heading {
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 44%;
     text-align: center;
   }
 
   #cartas, #positions {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
   }
   
   .shop-image {
-    width: 200px;  /* Ajusta el tamaño de la imagen */
-    height: 100px; /* Rectangular */
-    object-fit: cover;  /* Para que la imagen se ajuste bien */
-    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    width: 250px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+
+  .profile-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile-details h3, .profile-details p {
+    margin-bottom: 10px;
+  }
+  
+  #username, #bio, #contact {
+    font-weight: bold;
+    color: var(--button-color);
+  }
+  
+  #p-buttons {
+    display: inline-flex;
+
+  }
+
+  .closing-animation {
+    animation: close-screen 2s forwards;
+  }
+  
+  @keyframes close-screen {
+    0% {
+      clip-path: circle(100% at 50% 50%);
+    }
+    100% {
+      clip-path: circle(0% at 50% 50%);
+    }
+  }
+
+  #result-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }

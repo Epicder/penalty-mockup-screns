@@ -22,9 +22,21 @@ const articles = [
       <p>Posiciones</p>
     </div>
   </div>`,
-  `<div>
-      <h2>Article 3</h2>
-    </div>`
+  `<h2>Perfil</h2>
+  <div class="profile-tab">
+  <div class="profile-info">
+    <img src="/static/images/pfp.png" alt="Profile Picture" class="profile-picture">
+    <div class="profile-details">
+      <h3>Nombre: <span id="username">Elián Fc.</span></h3>
+      <p>Bio: <span id="bio">Aguante el manya paa</span></p>
+      <p>Id: <span id="contact">db572670-5db5-451d-8fd6-dec954b2dc02</span></p>
+    </div>
+    <div id="p-buttons">
+      <button id="friend-button"><img src="/static/images/user.png" alt="User" class="user-img"></button>
+      <button id="cards-button">Mis cartas</button>
+    </div>
+  </div>
+</div>`
 ];
 
 const extra = [
@@ -42,6 +54,16 @@ const section = document.getElementById("window");
 const arrowLeft = document.getElementById("arrow-left");
 const arrowRight = document.getElementById("arrow-right");
 section.innerHTML = articles[0];
+const play_btn = document.getElementById("play")
+const gif_container = document.getElementById("gif-container")
+
+function play_animation() {
+  document.body.classList.add("closing-animation");
+
+  //document.body.addEventListener("animationend", function() {
+    //gif_container.style.display = "block";
+  //});
+}
 
 function attachInfoListener() {
   const info_button = document.getElementById("info-button");
@@ -86,7 +108,7 @@ function infopage() {
         arrowRight.style.backgroundColor = "";
         arrowLeft.style.cursor = 'pointer';
         arrowRight.style.cursor = 'pointer';
-        attachInfoListener();  // Reattach the info button listener
+        attachInfoListener();
       }, 600);
     });
   }, 600);
@@ -97,3 +119,4 @@ attachInfoListener();
 
 arrowLeft.addEventListener("click", () => changeArticle(-1));
 arrowRight.addEventListener("click", () => changeArticle(1));
+play_btn.addEventListener("click", play_animation);

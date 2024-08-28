@@ -8,12 +8,19 @@
 <body>
 <h1>Penalty Shootout!</h1>
 <section id="window">
-    <!--se appendea el primer menu cuando carga la pag-->
+    <!--se appendea el primer article cuando carga la pag 
+    (los articles están en un array en el arrow_script.js)-->
+
 </section>
 
 <div id="arrow-left"><p>⬅</p></div>
 <div id="arrow-right"><p>➡</p></div>
+<div id="gif-container">
+    <img id="gif" src="{{ url_for('static', filename='images/loading_ball.gif') }}">
+    <p>buscando rival...</p>
+</div>
 <script src="{{ url_for('static', filename='js/arrow_script.js') }}"></script>
 </body>
 </html>
+
 
