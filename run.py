@@ -17,6 +17,13 @@ def play_classic():
     except Exception as e:
         return str(e)
 
+@app.route('/draft', methods=['GET'])
+def draft():
+    try:
+        return render_template('draft.html')
+    except Exception as e:
+        return str(e)
+    
 if __name__ == "__main__":
     app.run()
 

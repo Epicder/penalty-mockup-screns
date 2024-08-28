@@ -35,6 +35,9 @@ function find_match() {
       setTimeout(() => {
         telon.style.height = "100vh";
       }, 1700);
+      setTimeout(() => {
+        window.location.href = "/draft";
+        }, 4300);
     }, 400);
   
   });

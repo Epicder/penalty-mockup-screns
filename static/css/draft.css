@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #213a57;
+    --secondary-color: #14919b;
+    --accent-color: #45dfb1;
+    --button-color: #80ED99;
+    --body-color: #0b6477;
+    --section-color: rgba(69, 223, 177, 0.3);
+    --border-radius: 15px;
+    --opacity-article: 0.7;
+    --box-shadow-color: rgba(0, 0, 0, 0.15);
+    --transition-speed: 0.3s;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, var(--primary-color) 0%, var(--secondary-color) 100%);
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+  }
+
+  #telon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(38, 34, 36, 0.9);
+    z-index: 10;
+  }
+
+  #match-found {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    z-index: -100;
+    opacity: 0.1;
+    user-select: none;
+  }
+
+/* ----------------------------------------- */
+
+.field {
+  display: grid;
+  grid-template-areas: 
+    ". gk ."
+    "def1 . def2"
+    "mid1 . mid2"
+    "striker1 . striker2"
+    ". striker3 .";
+  grid-template-columns: 1fr 0fr 1fr; /* Controla el espacio horizontal */
+  grid-gap: 30px; /* Espacio entre elementos */
+  justify-items: center;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+#striker1 {
+  position: fixed;
+  top: 45%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+#striker2 {
+  position: fixed;
+  top: 45%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+#striker3 {
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#mid1 {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+#mid2 {
+  position: fixed;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+#def1 {
+  position: fixed;
+  top: 15%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+#def2 {
+  position: fixed;
+  top: 15%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.position {
+  width: 100px;
+  height: 100px;
+  background-color: var(--button-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#gk { grid-area: gk; }
+#def1 { grid-area: def1; }
+#def2 { grid-area: def2; }
+#mid1 { grid-area: mid1; }
+#mid2 { grid-area: mid2; }
+#striker1 { grid-area: striker1; }
+#striker2 { grid-area: striker2; }
+#striker3 { grid-area: striker3; }
+
+.position:hover {
+  background-color: #4FE9A7;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #14919b;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 50%;
+  margin: 40px auto;
+}
+
+#player-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#player-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+#player-list li:hover {
+  background-color: #ccc;
+}

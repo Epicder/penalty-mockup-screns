@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draft de Fútbol</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/draft.css') }}">
+</head>
+<body>
+    <div id="telon">
+        <p id="match-found">¡Partida encontrada!</p>
+        <div class="field">
+            <div class="position" id="gk">GK</div>
+            <div class="position" id="def1">DEF</div>
+            <div class="position" id="def2">DEF</div>
+            <div class="position" id="mid1">MID</div>
+            <div class="position" id="mid2">MID</div>
+            <div class="position" id="striker1">STRIKER</div>
+            <div class="position" id="striker2">STRIKER</div>
+            <div class="position" id="striker3">STRIKER</div>
+          </div>
+          <div id="player-modal" class="modal">
+            <div class="modal-content">
+              <h2>Selecciona a un jugador</h2>
+              <ul id="player-list">
+                <!-- JSON list of players will be rendered here -->
+                 </ul>
+    </div>
+   
+     <!-- Modal for selecting players -->
+
+         <script src="{{ url_for('static', filename='js/draft.js') }}"></script>
+</body>
+</html>
