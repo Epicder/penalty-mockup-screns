@@ -58,6 +58,7 @@
     animation-timing-function: ease-in-out;
 }
 
+
 @keyframes add-dots {
     0% {
         content: "";

@@ -1,12 +1,11 @@
 const playerList = [{ "name": "Dibu Martinez", "position": "GK" },
-  { "name": "Sergio Ramos", "position": "DEF" },
-  { "name": "Luka Modrić", "position": "MID" },
-  { "name": "Kylian Mbappé", "position": "STRIKER" }];
+  { "name": "	Júlio César", "position": "GK" },
+  { "name": "Fernando Muslera", "position": "GK" },
+  { "name": "Sergio Romero", "position": "GK" }];
 const positions = document.querySelectorAll('.position');
 const playerModal = document.getElementById('player-modal');
 const playerListElement = document.getElementById('player-list');
 
-// Render player list in modal
 playerList.forEach((player) => {
   const playerListItem = document.createElement('li');
   playerListItem.textContent = player.name;
@@ -14,22 +13,25 @@ playerList.forEach((player) => {
   playerListElement.appendChild(playerListItem);
 });
 
-// Add event listeners to positions
+
 positions.forEach((position) => {
   position.addEventListener('click', () => {
-    // Show modal with player list
+
     playerModal.style.display = 'block';
 
-    // Add event listener to player list items
+
     playerListElement.addEventListener('click', (event) => {
       const selectedPlayer = event.target.textContent;
       const selectedPosition = event.target.dataset.position;
 
-      // Update the corresponding position on the football field
-      document.getElementById(selectedPosition).textContent = selectedPlayer;
+ 
+      const positionElement = document.getElementById(selectedPosition);
+      if (positionElement) {
+        positionElement.textContent = selectedPlayer;
 
-      // Hide modal
-      playerModal.style.display = 'none';
-    });
+
+        playerModal.style.display = 'none';
+      }
+    }, { once: true });
   });
 });
