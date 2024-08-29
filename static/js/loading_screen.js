@@ -20,8 +20,8 @@ function find_match() {
 
       setTimeout(() => {
         text_find.style.opacity = 1;
-        text_find.style.fontSize = "2em";
-      }, 0);
+        text_find.style.fontSize = "2.2em";
+      }, 250);
       var telon = document.createElement("div");
       telon.style.position = "fixed";
       telon.style.top = "0";
