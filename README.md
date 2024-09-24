@@ -1,2 +1,3 @@
 # penalty-concept-game
-Main branch
+
+mockup of how the game will look and all of its screens
